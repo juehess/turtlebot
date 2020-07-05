@@ -1,4 +1,4 @@
-<package>
+<package format="2">
   <name>turtlebot_bringup</name>
   <version>2.4.2</version>
   <description>
@@ -6,14 +6,20 @@
   </description>
   <author>Tully Foote</author>
   <maintainer email="d.stonier@gmail.com">Daniel Stonier</maintainer>
+  <maintainer email="hunter.allen@ghostrobotics.io">Hunter L. Allen </maintainer>
   <license>BSD</license>
   <url type="website">http://ros.org/wiki/turtlebot_bringup</url>
   <url type="repository">https://github.com/turtlebot/turtlebot</url>
   <url type="bugtracker">https://github.com/turtlebot/turtlebot/issues</url>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>ament_cmake_ros</buildtool_depend>
 
-  <run_depend>realsense_camera</run_depend>
+  <exec_depend>create_node</exec_depend>
+  <exec_depend>turtlebot_capabilities</exec_depend>
+  <exec_depend>turtlebot_description</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+
+<!--   <run_depend>realsense_camera</run_depend>
   <run_depend>astra_launch</run_depend>
   <run_depend>zeroconf_avahi</run_depend>
   <run_depend>yocs_cmd_vel_mux</run_depend>
@@ -21,10 +27,6 @@
   <run_depend>kobuki_node</run_depend>
   <run_depend>kobuki_bumper2pc</run_depend>
   <run_depend>kobuki_safety_controller</run_depend>
-  <run_depend>create_node</run_depend>
-  <run_depend>turtlebot_capabilities</run_depend>
-  <run_depend>turtlebot_description</run_depend>
-  <run_depend>robot_state_publisher</run_depend>
   <run_depend>robot_pose_ekf</run_depend>
   <run_depend>diagnostic_aggregator</run_depend>
   <run_depend>openni_launch</run_depend>
@@ -32,4 +34,5 @@
   <run_depend>rocon_app_manager</run_depend>
   <run_depend>rocon_bubble_icons</run_depend>
   <run_depend>depthimage_to_laserscan</run_depend>
+-->
 </package>
