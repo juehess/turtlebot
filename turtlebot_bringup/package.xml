@@ -35,4 +35,7 @@
   <run_depend>rocon_bubble_icons</run_depend>
   <run_depend>depthimage_to_laserscan</run_depend>
 -->
+<export>
+  <build_type>ament_cmake</build_type>
+</export>
 </package>

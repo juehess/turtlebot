@@ -7,20 +7,18 @@
   <arg name="simulation" default="$(env TURTLEBOT_SIMULATION)" doc="set flags to indicate this turtle is run in simulation mode."/>
   <arg name="serialport" default="$(env TURTLEBOT_SERIAL_PORT)" doc="used by create to configure the port it is connected on [/dev/ttyUSB0, /dev/ttyS0]"/>
 
-  <param name="/use_sim_time" value="$(arg simulation)"/>
-
   <group>
-    <include file="$(find turtlebot_bringup)/launch/includes/robot.launch.xml">
+    <include file="$(find-pkg-share turtlebot_bringup)/launch/includes/robot.launch.xml">
       <param name="base" value="$(var base)"/>
       <param name="stacks" value="$(var stacks)"/>
       <param name="3d_sensor" value="$(var 3d_sensor)"/>
     </include>
-    <include file="$(find turtlebot_bringup)/launch/includes/mobile_base.launch.xml">
+    <include file="$(find-pkg-share turtlebot_bringup)/launch/includes/mobile_base.launch.xml">
       <param name="base" value="$(var base)" />
       <param name="serialport" value="$(var serialport)" />
     </include>
-    <include unless="$(eval arg('battery') == 'None')" file="$(find turtlebot_bringup)/launch/includes/netbook.launch.xml">
+    <!-- <include unless="$(eval arg('battery') == 'None')" file="$(find turtlebot_bringup)/launch/includes/netbook.launch.xml">
       <param name="battery" value="$(var battery)" />
-    </include>
+    </include> -->
   </group>
 </launch>
