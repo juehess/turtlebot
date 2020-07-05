@@ -2,15 +2,14 @@
   Robot description only (used in private and paired master).
  -->
 <launch>
-  <arg name="base"/>
+  <!-- <arg name="base"/>
   <arg name="stacks"/>
-  <arg name="3d_sensor"/>
-  <arg name="urdf_file" default="$(command 'xacro $(find-pkg-share turtlebot_description)/robots/$(var base)_$(var stacks)_$(var 3d_sensor).urdf.xacro')"/>
-  <!-- <param name="robot_description" command="$(arg urdf_file)"/> -->
+  <arg name="3d_sensor"/> -->
+
   <node pkg="robot_state_publisher" exec="robot_state_publisher">
     <param name="robot/name" value="turtlebot"/>
     <param name="robot/type" value="turtlebot"/>
     <param name="publish_frequency" value="5.0"/>
-    <param name="robot_description" value="$(var urdf_file)"/>
+    <param name="robot_description" value="$(command 'xacro $(find-pkg-share turtlebot_description)/robots/$(var base)_$(var stacks)_$(var 3d_sensor).urdf.xacro')"/>
   </node>
 </launch>

@@ -10,7 +10,7 @@
   <!-- mobile base -->
   <arg name="base"/>
   <arg name="serialport"/>
-  <include file="$(find-pkg-share turtlebot_bringup)/launch/includes/$(val base)/mobile_base.launch.xml">
+  <include file="$(find-pkg-share turtlebot_bringup)/launch/includes/$(var base)/mobile_base.launch.xml">
     <arg name="serialport" value="$(val serialport)"/>
     <arg name="manager" value="mobile_base_nodelet_manager"/>
   </include>

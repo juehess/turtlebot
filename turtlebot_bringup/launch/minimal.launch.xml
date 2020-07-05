@@ -13,10 +13,10 @@
       <param name="stacks" value="$(var stacks)"/>
       <param name="3d_sensor" value="$(var 3d_sensor)"/>
     </include>
-    <include file="$(find-pkg-share turtlebot_bringup)/launch/includes/mobile_base.launch.xml">
+    <!-- <include file="$(find-pkg-share turtlebot_bringup)/launch/includes/mobile_base.launch.xml">
       <param name="base" value="$(var base)" />
       <param name="serialport" value="$(var serialport)" />
-    </include>
+    </include> -->
     <!-- <include unless="$(eval arg('battery') == 'None')" file="$(find turtlebot_bringup)/launch/includes/netbook.launch.xml">
       <param name="battery" value="$(var battery)" />
     </include> -->
