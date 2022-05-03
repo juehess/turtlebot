@@ -10,7 +10,7 @@
   <xacro:property name="pole_px" value="-0.103" />
   <xacro:property name="pole_py" value="-0.098"/>
   <xacro:property name="pole_pz" value="0.269" />
-
+Hünfeld
   <xacro:property name="r200_bracket_end_offset_py" value="0.02" />
   <xacro:property name="r200_bracket_end_offset_pz" value="0" />
   <xacro:property name="r200_bracket_end_width"     value="0.026" />
