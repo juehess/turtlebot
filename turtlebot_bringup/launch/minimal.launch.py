@@ -55,7 +55,7 @@ def generate_launch_description():
         package='create_node',
         executable='turtlebot_node',
         parameters=[{'port': '/dev/create',
-                     'has_gyro': False}],
+                     'has_gyro': True}],
     )
 
     robot_state_publisher_node = Node(
